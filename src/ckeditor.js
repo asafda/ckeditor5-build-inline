@@ -32,6 +32,7 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import Mathematics from 'ckeditor5-math/src/math';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 
 export default class InlineEditor extends InlineEditorBase {}
 
@@ -62,7 +63,8 @@ InlineEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	TextTransformation,
-	Mathematics
+	Mathematics,
+	Alignment
 ];
 
 // Editor configuration.
@@ -80,6 +82,7 @@ InlineEditor.defaultConfig = {
 			'|',
 			'indent',
 			'outdent',
+			'alignment',
 			'|',
 			'imageUpload',
 			'blockQuote',
