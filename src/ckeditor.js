@@ -34,7 +34,7 @@ import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformatio
 import Mathematics from 'ckeditor5-math/src/math';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import SpecialCharacters from '@ckeditor/ckeditor5-special-characters/src/specialcharacters';
-import SpecialCharactersMathematical from '@ckeditor/ckeditor5-special-characters/src/specialcharactersmathematical';
+import SpecialCharactersEssentials from '@ckeditor/ckeditor5-special-characters/src/specialcharactersessentials';
 
 export default class InlineEditor extends InlineEditorBase {}
 
@@ -68,7 +68,7 @@ InlineEditor.builtinPlugins = [
 	Mathematics,
 	Alignment,
 	SpecialCharacters,
-	SpecialCharactersMathematical
+	SpecialCharactersEssentials
 ];
 
 // Editor configuration.
