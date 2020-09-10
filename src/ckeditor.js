@@ -72,7 +72,7 @@ InlineEditor.builtinPlugins = [
 	Mathematics,
 	Alignment,
 	SpecialCharacters,
-	SpecialCharactersEssentials
+	SpecialCharactersEssentials,
 ];
 
 // Editor configuration.
@@ -101,20 +101,43 @@ InlineEditor.defaultConfig = {
 			'mediaEmbed',
 			'math',
 			'undo',
-			'redo'
-		]
+			'redo',
+		],
 	},
 	image: {
-		toolbar: [
-			'imageStyle:full',
-			'imageStyle:side',
-			'|',
-			'imageTextAlternative'
-		]
+		image: {
+			styles: ['alignLeft', 'alignCenter', 'alignRight'],
+			resizeOptions: [
+				{
+					name: 'imageResize:original',
+					label: 'Original',
+					value: null,
+				},
+				{
+					name: 'imageResize:50',
+					label: '50%',
+					value: '50',
+				},
+				{
+					name: 'imageResize:75',
+					label: '75%',
+					value: '75',
+				},
+			],
+			toolbar: [
+				'imageStyle:alignLeft',
+				'imageStyle:alignCenter',
+				'imageStyle:alignRight',
+				'|',
+				'imageResize',
+				'|',
+				'imageTextAlternative',
+			],
+		},
 	},
 	table: {
-		contentToolbar: [ 'tableColumn', 'tableRow', 'mergeTableCells' ]
+		contentToolbar: ['tableColumn', 'tableRow', 'mergeTableCells'],
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
-	language: 'he'
+	language: 'he',
 };
